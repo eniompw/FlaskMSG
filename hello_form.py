@@ -3,10 +3,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'home page'
-
-@app.route('/form')
-def form():
     name = request.args.get('name', '')
     if name == '':
         return render_template('simple_form.html')
